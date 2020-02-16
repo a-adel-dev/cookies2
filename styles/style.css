@@ -1,0 +1,433 @@
+/* CSS reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* General styles */
+
+body {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.6em;
+    color: #333;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+strong {
+    font-weight: 900;
+}
+
+em {
+    font-style: italic;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover,
+a:focus {
+    color: orangered;
+}
+
+/* general classes */
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;    
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1.2em;
+    
+}
+
+.btn {
+    border: none;
+    font-family: 'Amatic sc', cursive;
+    font-size: 1.2em;
+    background-color: orangered;
+    color: white;
+    padding: .25em;
+    cursor: pointer;
+}
+
+.paragraph-default {
+    padding: 1em 1em 0;
+    text-align: justify;
+}
+
+
+/* header */
+
+#header {
+    background: white;
+    z-index: 99;
+    width: 100%;
+}
+
+#header .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    background-color: white;
+    padding: 1em 0em 0;
+}
+
+/* Logo  #logo-link */
+
+#logo-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-link a:hover,
+#logo-link a:focus {
+    color: #333;
+}
+
+#logo-link h3 {
+    font-size: 2em;
+}
+
+#header-img {
+    display: inline-block;
+    width: 70px;
+    margin: 10px;
+}
+
+/* Social navigation area */
+
+#header-social-nav ul {
+    width: 350px;
+    margin: .5em auto;
+}
+
+#header-social-nav i {
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+}
+
+#header-social-nav a{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+/* main navigation area */
+
+#nav-bar a:hover,
+#nav-bar a:focus {
+    background-color: orangered;
+    color: white;
+}
+
+#nav-bar ul {
+    flex-direction: column;
+}
+
+#nav-bar li {
+    border-bottom: 1px solid rgba(0,0,0,.25);
+    padding: 10px;
+    text-align: center;
+}
+
+#nav-bar a:first-child {
+    border-top: 1px solid rgba(0,0,0,.25);
+}
+
+#nav-bar a {
+    display: inline-block;
+}
+
+.section-header {
+    text-align: center;
+    font-weight: 900;
+    margin: .5em auto;
+}
+
+/* Section A  */
+
+#section-a {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    background-color: wheat;
+    background-image: url("../images/bgpattern.png");
+    background-repeat: repeat;
+}
+
+#text-box {
+    width: 50%;
+    justify-self: center;
+    order:2;
+}
+
+#text-box h1, h3 {  
+    text-align: right;
+}
+
+
+#cookie-image {
+    width: 400px;
+    justify-self: center;
+    order: 1;
+}
+
+#cookie-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sectoin B */
+
+#section-b {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 1fr;
+    grid-auto-rows: 0;
+    overflow: hidden;
+    gap: 1em;
+}
+
+
+#section-b-img-container {
+    width: 400px;
+    overflow: hidden;
+    margin: .5em auto;
+}
+
+#section-b-img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* section C */
+
+.video-container {
+    margin: .5em auto;
+    overflow: hidden;
+    /* width: 800px;
+    height: 450px */
+    width: 400px;
+    height: 225px;
+}
+
+.video-container iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* section D */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+    gap: 1em;
+    margin: 0 auto;
+    padding: 0 9%;
+    justify-items: center;
+    max-width: 1500px;
+}
+
+.card-img-container {
+    max-width: 100%;
+    height: auto; 
+}
+
+.card-btn {
+    width: 345px;
+    margin-top: .25em;
+}
+
+/* section e  */
+#section-e p{
+    margin: 0 auto;
+    padding: 0 1.5em ;
+    text-align: center;
+}
+
+#section-e form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    gap: 10px;
+    justify-content: center;   
+    width: 95%;
+    margin: .5em auto;
+    
+}
+
+#email {
+    font-family: 'amatic sc', cursive;
+    font-size: 1.3em;
+    padding: 4px;
+    width: 100%;   
+}
+
+#submit {
+  width: 100%;
+
+}
+
+/* Footer  */
+
+footer {
+    background-color: #dadada;
+}
+
+#footer-social-nav {
+    width: 200px;
+    margin: .5em auto;
+    font-size: .8em;
+}
+
+#footer-nav {
+    width: 500px;
+    margin: .5em auto;
+}
+
+#footer-text {
+    text-align: center;
+    font-size: 1em;
+
+}
+
+#footer-text a {
+    display: inline-block;
+    margin-left: .5em;
+    margin-right: .5em;
+}   
+
+@media (min-width:480px) {
+    #header {
+        position: fixed;
+
+    }
+
+    #header .container {
+
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    #header-social-nav {
+        justify-self: self-end;
+        align-self: flex-end;
+    }
+
+    #header-social-nav a {
+        width: auto;
+        height: auto;   
+    }
+
+    #header-social-nav ul {
+        width: 100px;
+    }
+
+    #header-social-nav i {
+        font-size: .6em;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #place-holder {
+        height: 83px;
+        background-color: greenyellow;
+    }
+
+    #nav-bar {
+        align-self: flex-end; 
+    }
+
+    #nav-bar a:hover,
+    #nav-bar a:focus {
+        background-color: transparent;
+        color: orangered;
+    }
+
+    #nav-bar ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #nav-bar a:first-child{
+        border: none;
+    }
+
+    #nav-bar li {
+        border: none;
+        font-size: 1.5em;
+    }
+
+    #section-a {
+        margin: 0 auto;
+        gap: 1em;
+    }
+
+    #text-box {
+
+        order: 1;
+        margin-top: 4em;
+        justify-self: end;
+    }
+
+    #cookie-image {
+        order: 2;
+        justify-self: start;
+        padding: 1em;
+    }
+
+    .video-container {
+
+        width: 800px;
+        height: 450px
+
+    }
+
+
+}
